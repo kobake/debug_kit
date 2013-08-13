@@ -858,6 +858,14 @@ DEBUGKIT.toolbarToggle = function () {
 				Cookie.write('toolbarDisplay', display);
 			});
 			toolbarHidden = !toolbarHidden;
+
+			// Set 'minimized' class when minimized
+			if (toolbarHidden) {
+				$('#debug-kit-toolbar').addClass('minimized');
+			} else {
+				$('#debug-kit-toolbar').removeClass('minimized');
+			}
+
 			return false;
 		}
 	};
